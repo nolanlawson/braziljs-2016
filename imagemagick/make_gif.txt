@@ -1,0 +1,1 @@
+convert -dispose previous -loop 0 bg.png -page +25+25 kirby_paint*gif -page +30+20 kirby_bigfight*gif -page +35+35 /tmp/kirby_betterspin_dance-fixed.gif -page +20+10 kirby_run*gif out.gif

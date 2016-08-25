@@ -1,0 +1,225 @@
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  line-height: 1em;
+  letter-spacing: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+button.btn {
+  width: 100%;
+  font-size: 1.1em;
+  margin: 0 auto;
+}
+
+.video-compare {
+  display: -webkit-box;
+  display: flex;
+  justify-content: center;
+  height: 640px;
+}
+
+.flex {
+  display: -webkit-box;
+  display: flex;
+}
+
+.horizontal-flex {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  flex-direction: column;
+}
+
+.center-flex {
+  display: -webkit-box;
+  display: flex;
+  align-items: center;
+}
+
+.center-flex .no-emphasis {
+  flex-grow: 0;
+}
+
+.center-flex .emphasis {
+  flex-grow: 1;
+}
+
+.reveal .slides .fancy-fragments {
+  height: 600px;
+}
+
+.reveal .slides .fancy-fragments .fragment {
+  transition: all 0.4s cubic-bezier(.17, .67, .58, 1);
+  -webkit-transition: all 0.4s cubic-bezier(.17, .67, .58, 1);
+
+  max-height: 95%;
+  opacity: 0;
+}
+
+.reveal .slides .fancy-fragments .fragment.visible {
+  max-height: 95%;
+  opacity: 1;
+}
+
+.reveal .slides .fancy-fragments .fragment.fancy-first:not(.visible) {
+  transform: translate3d(0, -999px, 0) scale3d(0.9, 0.9, 1);
+  -webkit-transform: translate3d(0, -999px, 0) scale3d(0.9, 0.9, 1);
+}
+
+.reveal .slides .fancy-fragments .fragment.fancy-second:not(.visible) {
+  transform: translate3d(0, 999px, 0) scale3d(0.9, 0.9, 1);
+  -webkit-transform: translate3d(0, 999px, 0) scale3d(0.9, 0.9, 1);
+}
+
+.reveal .slides .fancy-fragments .fragment.visible {
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+}
+
+.reveal .slides .fancy-fragments .fragment img {
+  transition: none;
+  -webkit-transition: none;
+}
+
+.android-chart {
+  min-width: 310px;
+  height: 400px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.reveal .nice-table td {
+  padding-right: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+.reveal .nice-table th {
+  padding-right: 3em;
+  padding-bottom: 0.5em;
+}
+
+.text-muted {
+  opacity: 0.4;
+}
+
+.reveal .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 0.5em;
+  transform: translate(0, 50px);
+  width: 100%;
+}
+
+.reveal .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 0.5em;
+  transform: translate(0, -50px);
+  width: 100%;
+}
+
+.sources li {
+  font-size: 0.7em !important;
+}
+
+.reveal img.inline-img {
+  display: inline-block;
+  border: 0;
+  background: none;
+  margin: 0;
+  box-shadow: none;
+  transform: translate(0, 20px);
+}
+
+.reveal img.no-border {
+  border: none;
+  box-shadow: none;
+}
+
+.overlay-outer {
+  position: relative;
+}
+
+pre.overlay-inner {
+  position: absolute;
+  width: 100%;
+}
+
+.hoist {
+  top: -40% !important;
+}
+
+.pixel-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0 auto !important;
+  background-size: contain;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+}
+
+.quad-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quad-inner {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100%;
+  min-width: 100%;
+  display: flex;
+  margin: 5px 0 !important;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  hyphens: none !important; /* yolo */
+}
+
+.reveal pre code.embiggen {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+video.big-video {
+  max-width: initial !important;
+  max-height: initial !important;
+}
+
+table.fade-in-table {
+  border-collapse: collapse;
+}
+
+table.fade-in-table td,
+table.fade-in-table th {
+  padding: 20px;
+}
+
+table.fade-in-table td {
+  border: 2px solid #333;
+}
+
+.signature {
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding-bottom: 56px;
+  padding-left: 30px;
+  font-size: 22px;
+  color: darkblue;
+  font-family: Arial, Helvetica, "sans-serif";
+  z-index: 1000;
+}
+
+html {
+  /* fix reveal fullscreen black background issue */
+  background-color: #fafafa !important;
+} 

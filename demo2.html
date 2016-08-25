@@ -1,0 +1,148 @@
+<html>
+<head>
+  <style>
+    html, body {
+      font-family: Helvetica, Arial, sans-serif;
+      padding: 10px;
+    }
+
+    body {
+      margin: 0 auto;
+    }
+
+    input[type=radio] {
+      margin: 10px 10px;
+    }
+
+    button {
+      margin: 10px 20px;
+      font-size: 18px;
+      background: #ededed;
+      border: 2px solid gray;
+      border-radius: 4px;
+      padding: 10px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    legend {
+      font-size: 20px;
+    }
+
+    fieldset {
+      margin: 20px 0;
+    }
+
+    small {
+      margin: 10px auto 0;
+      color: #666;
+      font-size: 14px;
+      display: block;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .pixel-image {
+      image-rendering: -moz-crisp-edges;
+      image-rendering: pixelated;
+    }
+
+    .move-wrapper {
+      height: 150px;
+      width: 200px;
+      position:relative;
+    }
+
+    .move {
+      top: calc(50% - 210px);
+      left: 0;
+      position: absolute;
+      animation: moveIt ease-in-out 500ms alternate infinite;
+    }
+    input[type=text], textarea {
+      font-size: 16px;
+      width: 75%;
+      padding: 10px;
+    }
+
+    textarea {
+      height: 150px;
+      font-family: monospace;
+    }
+
+    @keyframes moveIt {
+      0% {
+        left: -90px;
+      }
+      100% {
+        left: -10px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<h1>Kirbypalooza</h1>
+<form>
+  <div>
+
+    <div style="display:inline-block;">
+      <img class="pixel-image" height="150" src="img/kirbydance.gif"/>
+      <small>(Animated GIF)</small>
+    </div>
+
+    <div style="display:inline-block;">
+      <video height="150" loop autoplay src="vid/kirby_blimp.webm"></video>
+      <small>(HTML5 video)</small>
+    </div>
+
+    <div style="display:inline-block;">
+      <div class="move-wrapper">
+        <img class="move pixel-image" height="300" src="img/kirby_slide.png"/>
+      </div>
+      <small>(CSS <code>left</code> animation)</small>
+    </div>
+
+    <fieldset>
+      <legend>What is the best Kirby game?</legend>
+      <input type="radio" name="animal" value="k1" id="k1"/><label for="k1">Kirby's Adventure</label><br/>
+      <input type="radio" name="animal" value="k2" id="k2"/><label for="k2">Kirby's Dream Land</label><br/>
+      <input type="radio" name="animal" value="k3" id="k3"/><label for="k3">Kirby Super Star</label><br/>
+      <input type="radio" name="animal" value="k4" id="k4"/><label for="k4">Kirby 64</label><br/>
+    </fieldset>
+
+    <fieldset>
+      <legend>Do you love Kirby?</legend>
+      <input type="checkbox" checked="checked" id="mycheck">
+      <label for="mycheck">Obviously</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Why?</legend>
+      <input type="text" value="because his mission in life is to eat everything in sight">
+    </fieldset>
+
+    <fieldset>
+      <legend>Tell me more!</legend>
+      <textarea>first you draw a circle
+then you dot the eyes
+add a great big smile
+and presto, it's Kirby!
+<('o')> (>'.')> <('.'<) <('.')> (>'.')> <('.'<)
+      </textarea>
+    </fieldset>
+
+
+    <button type="submit">Send a wish into the cosmos!</button>
+
+  </div>
+</form>
+
+</body>
+</html>
