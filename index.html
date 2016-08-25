@@ -48,7 +48,8 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-          <h2>Demystifying Web Workers and Service Workers</h2>
+          <h2>We can work it out</h2>
+          <h4>From Web Workers to Service Workers</h4>
           <img class="no-border" src="img/worker_kirby_big.png"/>
 
             <h4>@nolanlawson</h4>
@@ -291,12 +292,21 @@ self.onmessage = function (e) {
           </ul>
         </section>
         <section>
-          <div>
+          <div style="transform:translateY(-50px);">
+            <h4>Pokedex.org</h4>
             <video height=650>
               <source src="vid/pokedex_loop.webm" type="video/webm" />
               <source src="vid/pokedex_loop.mp4" type="video/mp4" />
             </video>
           </div>
+        </section>
+
+        <section>
+            <img src="img/pokedex_architecture.png" alt="pokedex.org virtual dom architecture"/>
+
+            <div class="footer text-muted"  style="transform: translateY(-5px);">
+                Source: http://www.pocketjavascript.com/blog/2015/11/23/introducing-pokedex-org
+            </div>
         </section>
         <!--
         <section>
@@ -441,11 +451,20 @@ self.addEventListener('fetch',
         <section>
           <table class="fade-in-table" cellspacing="0">
             <tr><th></th><th>Web Workers</th><th>Service Workers</th></tr>
-            <tr><th class="fragment">Tab control</th><td class="fragment">Many per tab</td><td class="fragment">One for all tabs</td></tr>
+            <tr><th class="fragment">Tab control</th><td class="fragment">Many per tab</td><td class="fragment">One per scope*</td></tr>
             <tr><th class="fragment">Lifespan</th><td class="fragment">Same as tab</td><td class="fragment">Independent</td></tr>
             <tr><th class="fragment">Good for</th><td class="fragment">Parallelism</td><td class="fragment">Offline</td></tr>
           </table>
         </section>
+
+                <section>
+                    <h3>Pokedex.org bundle sizes</h3>
+                    <table style="margin: 0 auto;">
+                        <tr><td><strong>main.js</strong></td><td>24.1kB</td></tr>
+                        <tr><td><strong>worker.js</strong></td><td>90.9kB</td></tr>
+                        <tr><td><strong>serviceWorker.js</strong></td><td>15.8kB</td></tr>
+                    </table>
+                </section>
 
         <section>
           <h2>Protips</h2>
@@ -581,6 +600,7 @@ registerPromiseWorker(msg => {
             <li><a href="https://www.oreilly.com/ideas/angular-2-and-the-future-of-html5-apps">
               Angular 2 and the future of HTML5 apps
             </a></li>
+              <li><a href="https://jakearchibald.com/2016/service-worker-meeting-notes/">Jake Archibald: Service Worker meeting notes</a></li>
           </ul>
 
         </section>
